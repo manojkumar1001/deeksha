@@ -1,0 +1,159 @@
+#title{
+    background-color:rgb(39, 39, 39); 
+    height: 55px;
+}
+
+.titleIcon{
+    width:38px; 
+    margin-left:11%
+}
+
+#titleSubText{
+    font-size: 0.7vw; 
+    color:white; 
+    margin-left:16%; 
+    margin-top:-6px
+}
+#fillData{
+    background-color:rgb(56, 23, 23);
+}
+.selectTab{
+    padding:0px;
+}
+#titleText{
+    color:white; 
+    font-weight: bolder; 
+    font-size: 2.1vw; 
+    margin-left:1%
+}
+#datePicker{
+    margin:0px;
+}
+
+#colTwo{
+    padding:0px;
+}
+
+#noDataDisplay{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%; width:100%
+}
+.buttonAlign{
+    text-align:center
+}
+#searchButton{
+    background-color:rgb(192, 57, 8); 
+    color:white; 
+    border: 0px;
+    position: absolute;
+    width:33%;
+    padding: 2px;
+}
+#inputDatePicker{
+    background:white; 
+    height:33px; 
+    border-radius: 4px
+}
+#fDetails :hover{
+    cursor:pointer;
+    background-color: #e2e2e2
+}
+#fDetails{
+    margin-top:3%; 
+    height:162px;
+    padding-left: 24px;
+    padding:2%; 
+    width:100%;
+}
+
+#stylingForParentDiv{
+    padding:2%; 
+    border:1px solid#e0dede;
+    width:80%;
+}
+#divForPrice{
+    font-weight:bold;
+}
+#divForFlightName{
+    font-weight:bold; 
+    margin-left:14%;
+}
+#textColor{
+    color:red
+}
+.textFont{
+    font-size:1vw;
+}
+#textAlignForCode{
+    margin-left:14%;
+}
+.bookingButton{
+    float: right;
+    margin-top:-7%;
+    background: #ff0000;
+    width: 25%;
+    border:0px;
+    height: 36px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    height: 33px;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+      padding-bottom: 0px !important;
+  }
+  
+  .container {
+    margin-left:13%; 
+    margin-top:13%
+  }
+  
+  .col-75 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .row{
+      margin-left:-1px !important;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
