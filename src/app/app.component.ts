@@ -10,25 +10,25 @@ import * as d3 from 'd3';
 
 export class AppComponent {
   title = 'FlightSearch';
-  data : any;
-  height = window.innerHeight - 55 -17;
+  data: any;
+  height = window.innerHeight - 55 - 17;
   width = window.innerWidth;
   displayData = false;
   alignForm = document.getElementById("fillData");
-  flightData : any;
+  flightData: any;
   flightDataArray: any;
 
-  constructor(private flightService:FlightDataService) { }
+  constructor(private flightService: FlightDataService) { }
   //service has the data for which I have done a call to Json data using Observables and subscribe (flight-data.service)
 
   ngOnInit() {
-    this.data = this.getFlightDataService(); 
+    this.data = this.getFlightDataService();
   }
 
   getFlightDataService(): void {
     //call for service
     this.flightService.getFlightData()
-        .subscribe(flightData => this.flightData = flightData);
+      .subscribe(flightData => this.flightData = flightData);
     return this.flightData;
   }
 
@@ -52,32 +52,29 @@ export class AppComponent {
     return splitDate;
   }
 
-  originOptions = ['Please Select Origin City','Pune', 'Delhi', 'Goa', 'Bangalore']; //dropdown for city
-  destinationOptions = ['Please Select Destination City','Pune', 'Delhi', 'Goa', 'Bangalore'];
-  numOfPassengers = ['Please Select the number', '1', '2','3','4','5']; //dropdown for numOfPassengers
-  
- loader = false;
+  originOptions = ['Please Select Origin City', 'Pune', 'Delhi', 'Goa', 'Bangalore']; //dropdown for city
+  destinationOptions = ['Please Select Destination City', 'Pune', 'Delhi', 'Goa', 'Bangalore'];
+  numOfPassengers = ['Please Select the number', '1', '2', '3', '4', '5']; //dropdown for numOfPassengers
+
   //onClick of Search Button
   flightSearch(origin, destination, numOfPsg, date) {
-    console.log(origin, destination);
-    this.loader = true;
-    this.displayData =false;
+    this.displayData = false;
     this.flightDataArray = [];
 
     //validations for origin and destination dropdown
-    if(origin === this.originOptions[0] || destination === this.destinationOptions[0]){
-      if(origin === this.originOptions[0]){
+    if (origin === this.originOptions[0] || destination === this.destinationOptions[0]) {
+      if (origin === this.originOptions[0]) {
         document.getElementById('origin').style.borderColor = "red"; //If city is not selected, it is validated by red border
       }
-      if(destination === this.destinationOptions[0]){
+      if (destination === this.destinationOptions[0]) {
         document.getElementById('destination').style.borderColor = "red"
       }
-      else{
+      else {
         document.getElementById('origin').style.borderColor = "red";
         document.getElementById('destination').style.borderColor = "red"
       }
       alert("Please select the city")
-    } 
+    }
     else {
       if (origin === '' || destination === '' || numOfPsg === this.numOfPassengers[0] || date === '') {
         alert("Please Fill All the Fields");
@@ -97,7 +94,7 @@ export class AppComponent {
             if (numOfPsg < flightData[i].availableSeats) {
               this.flightDataArray.push(flightData[i]);
             }
-            
+
           }
         }
         if (this.displayData === false) {
@@ -106,16 +103,6 @@ export class AppComponent {
       }
       document.getElementById('origin').style.borderColor = "black";
       document.getElementById('destination').style.borderColor = "black";
-    }
-  }
-
-  checkTime(date) {
-    console.log(date.Now.Hour);
-    if (date.Now.Hour < 12) {
-      return 'am';
-    }
-    else {
-      return 'pm';
     }
   }
 }
