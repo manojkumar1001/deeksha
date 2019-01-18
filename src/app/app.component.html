@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4 col-md-4 " [style.height]="height-55-17" id="fillData">
+    <div class="col-sm-4 col-md-4 col-xs-12" [style.height]="height-55-17" id="fillData">
       <div class="container">
         <div class="row">
           <div class="col-75">
@@ -39,9 +39,8 @@
             </mat-form-field>
           </div>
         </div>
-      </div>
-      <div class="col-75 buttonAlign">
-        <button id="searchButton" (click)="flightSearch(origin.value, destination.value, psg.value, date.value)">Search</button>
+        <div class="row">
+        <button id="searchButton" (click)="flightSearch(origin.value, destination.value, psg.value, date.value)">Search</button></div>
       </div>
     </div>
     <div class="col-sm-8 col-md-8" id="colTwo">
