@@ -1,6 +1,6 @@
 #title{
     background-color:rgb(39, 39, 39); 
-    height: 55px;
+    padding: 1% 0%;
 }
 
 .titleIcon{
@@ -28,6 +28,7 @@
 }
 #datePicker{
     margin:0px;
+    max-width: 80%;
 }
 
 #colTwo{
@@ -35,10 +36,9 @@
 }
 
 #noDataDisplay{
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100%; width:100%
+    max-height: 100%; max-width:100%
 }
 .buttonAlign{
     text-align:center
@@ -50,6 +50,7 @@
     position: absolute;
     width:33%;
     padding: 2px;
+    margin: 0 16%
 }
 #inputDatePicker{
     background:white; 
@@ -130,8 +131,7 @@ input[type=text], select, textarea {
   }
   
   .container {
-    margin-left:13%; 
-    margin-top:13%
+    padding: 14%;
   }
   
   .col-75 {
