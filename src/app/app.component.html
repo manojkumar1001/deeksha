@@ -7,7 +7,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4 col-md-4 col-xs-12" id="fillData">
+    <div class="col-sm-4 col-md-4 col-xs-12"
+     id="fillData">
       <div class="container">
         <div class="row">
           <div class="col-75">
@@ -43,7 +44,7 @@
         <button id="searchButton" (click)="flightSearch(origin.value, destination.value, psg.value, date.value)">Search</button></div>
       </div>
     </div>
-    <div class="col-sm-8 col-md-8" id="colTwo">
+    <div class="col-xs-12 col-sm-8 col-md-8" id="colTwo">
       <div *ngIf="!displayData">
         <img id="noDataDisplay" src="assets/imageFlight.jpg">
       </div>
@@ -70,12 +71,12 @@
                   {{data.airline}}
                 </span>
               </span>
-              <div style="margin-left:28%" >
-                <img class="titleIcon" src="https://userscontent2.emaze.com/images/d5437e72-fe68-4010-b4e8-1ace56fd27c7/e7ff4de3-f191-425f-b5a1-acfba7e3793c.png">
+              <div>
+                <img class="titleIcon" src="assets/flight.png">
               </div>
             </div>
             <div class=row>
-              <div class="col-25">
+              <div class="col-4">
                 <div>
                   {{data.airlineCode}}
                 </div>
@@ -89,7 +90,7 @@
                   Arrive: {{(data.arrival).substring(0,10)}}/{{(data.arrival).substring(11,19)}}
                 </div>
               </div>
-              <div class="col-25" id="textAlignForCode">
+              <div class="col-4">
                 <div>
                   {{data.airlineCode}}
                 </div>
@@ -103,10 +104,11 @@
                   Available Seats: {{data.availableSeats}}
                 </div>
               </div>
+              <div class="col-4">
+                <button type="button" class="btn btn-success" style="padding:2%">Book</button>
+              </div>
             </div>
-            <div>
-              <button type="button" class="btn btn-success bookingButton">Book The Flight</button>
-            </div>
+           
           </div>
         </div>
       </div>

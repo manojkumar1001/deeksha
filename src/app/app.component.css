@@ -62,17 +62,12 @@
     background-color: #e2e2e2
 }
 #fDetails{
-    margin-top:3%; 
-    height:162px;
-    padding-left: 24px;
     padding:2%; 
-    width:100%;
 }
 
 #stylingForParentDiv{
     padding:2%; 
     border:1px solid#e0dede;
-    width:80%;
 }
 #divForPrice{
     font-weight:bold;
